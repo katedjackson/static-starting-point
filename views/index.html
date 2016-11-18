@@ -3,31 +3,34 @@
 {% block title %}Your Trip{% endblock %}
 
 {% block content %}
-<div id="app" class="clearfix">
-    <h1>Hello, this is your app.</h1>
+<div id="scroll_select" class="clearfix">
+    <h1>Toboggan</h1>
+    <div>
+        <div id="hotels">
+        	<select name="hotels">
+        	{% for hotel in hotels %}
+        	<option value="{{hotel.name}}">{{hotel.name}}</option>
+        	{% endfor %}
+        	</select>
+        </div>
 
-    <div id="hotels"> 
-    	<select name="hotels">
-    	{% for hotel in hotels %}
-    	<option value="{{hotel.name}}">{{hotel.name}}</option>
-    	{% endfor %}
-    	</select>
-    </div>
+        <div id="restaurants">
+        	<select name="restaurants">
+        	{% for restaurant in restaurants %}
+        	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
+        	{% endfor %}
+        	</select>
+        </div>
 
-    <div id="restaurants"> 
-    	<select name="restaurants">
-    	{% for restaurant in restaurants %}
-    	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
-    	{% endfor %}
-    	</select>
+        <div id="activities">
+        	<select name="activities">
+        	{% for activity in activities %}
+        	<option value="{{activity.name}}">{{activity.name}}</option>
+        	{% endfor %}
+        	</select>
+        </div>
     </div>
-
-    <div id="activities"> 
-    	<select name="activities">
-    	{% for activity in activities %}
-    	<option value="{{activity.name}}">{{activity.name}}</option>
-    	{% endfor %}
-    	</select>
-    </div>
+</div>
+<div id="itinerary">
 </div>
 {% endblock %}

@@ -1,0 +1,21 @@
+{
+  "name": "trip-planner",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Kate <katelynj29@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/katedjackson/toboggan",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}

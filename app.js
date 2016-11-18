@@ -17,6 +17,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/bower_components/'));
+// app.use('/jquery', express.static(__dirname + '/bower_components/jquery/dist'));
 
 app.use('/', require('./routes'));
 
@@ -40,7 +42,7 @@ app.use(function (err, req, res, next) {
 
 models.db.sync({})
     .then(function () {
-        app.listen(9000, function (err) {
+        app.listen(3000, function (err) {
             if (err) return console.error(err);
             console.log('Server listening intently on 9000!');
         });
