@@ -1,0 +1,27 @@
+const Sequelize = require('sequelize');
+const dbConnection = require('./_db');
+
+const Place = dbConnection.define('place', {
+    address: {
+        type: Sequelize.STRING,
+        allowNull: false
+    }, 
+    city: {
+        type: Sequelize.STRING,
+        allowNull: false	
+    }, 
+    state: {
+    	type: Sequelize.STRING,
+        allowNull: false
+    },
+    phone: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    location: { //lat, lon float array
+    	type: Sequelize.ARRAY(Sequelize.DECIMAL),
+        allowNull: false
+    }
+});
+
+module.exports = Place;

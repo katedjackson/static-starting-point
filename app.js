@@ -29,6 +29,8 @@ app.use(function (req, res, next) {
 
 // handle any errors
 app.use(function (err, req, res, next) {
+    console.log('trying to send another thing');
+
     console.error(err, err.stack);
     res.status(err.status || 500);
     res.render('error', {
@@ -38,9 +40,9 @@ app.use(function (err, req, res, next) {
 
 models.db.sync({})
     .then(function () {
-        app.listen(3000, function (err) {
+        app.listen(9000, function (err) {
             if (err) return console.error(err);
-            console.log('Server listening intently on 3000!');
+            console.log('Server listening intently on 9000!');
         });
     })
     .catch(console.error);
