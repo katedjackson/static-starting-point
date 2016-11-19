@@ -1,3 +1,29 @@
 #scroll_select {
   overflow: auto;
+  height: 200px;
+  padding: .5rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+container {
+	position: absolute;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+map, itinerary {
+	position: fixed;
 }
