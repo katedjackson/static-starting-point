@@ -47,16 +47,31 @@ var activities = ['Mahayana Temple Buddhist Association',  'Battery Park', 'Stat
 //   })
 // });
 
-activities.forEach(function (activity) {
-  yelp.search({term: activity, limit: 1, location: 'New York' })
-  .then(function (data) {
-    large_image_url = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
-    Activity.findOne({where: {name: activity}})
-    .then(function (foundActivity) {
-      foundActivity.update({image: large_image_url})
-      .then(function (updatedActivity) {
-        console.log(`Updated image url for ${activity}! Hooray!`);
-      })
-    })
-  })
-});
+// activities.forEach(function (activity) {
+//   yelp.search({term: activity, limit: 1, location: 'New York' })
+//   .then(function (data) {
+//     large_image_url = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//     Activity.findOne({where: {name: activity}})
+//     .then(function (foundActivity) {
+//       foundActivity.update({image: large_image_url})
+//       .then(function (updatedActivity) {
+//         console.log(`Updated image url for ${activity}! Hooray!`);
+//       })
+//     })
+//   })
+// });
+
+  // yelp.search({term: 'Strand Bookstore', limit: 10, location: 'New York' })
+  // .then(function (data) {
+  //   for (var i = 0; i < data.businesses.length; i++) {
+  //     console.log(data.businesses[i].name);
+  //   }
+  //   large_image_url = data.businesses[1].image_url.replace(/ms\.jpg/, 'l.jpg');
+  //   Activity.findOne({where: {name: 'Strand Bookstore'}})
+  //   .then(function (foundRestaurant) {
+  //     foundRestaurant.update({image: large_image_url})
+  //     .then(function (updatedRestaurant) {
+  //       console.log(`Updated image url! Hooray!`);
+  //     })
+  //   })
+  // })
