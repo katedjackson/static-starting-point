@@ -81,4 +81,9 @@ db.sync({force: true})
     })
     .catch(function (err) {
         console.error('There was totally a problem', err, err.stack);
+    })
+    .finally(function () {
+        db.close();
+        // this is a bluebird thing! Pass a handler that will be called regardless of this promise's fate. Returns a new promise chained from this promise. There are special semantics for .finally in that the final value cannot be modified from the handler.
+        return null;
     });
