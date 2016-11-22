@@ -40,7 +40,7 @@ html, body {
 .pre-scrollable {
 	flex: 1;
 	max-height: 95% !important;
-  margin-right: -15%;
+  // margin-right: -15%;
 }
 
 .pre-scrollable::-webkit-scrollbar {
@@ -49,7 +49,7 @@ html, body {
 
 .sidebar-wrapper {
 	height: 100%;
-    padding: 50px 0 0px 0;
+    padding: 50px;
     border-right: 1px solid gray;
 }
 
@@ -59,7 +59,7 @@ html, body {
   height: 100%;
   width: 15%;
   z-index: -1;
-  padding-top: 50px;
+  padding: 50px;
   margin: 0px;
   background-color: #448888;
 }
@@ -78,7 +78,7 @@ h2 {
 }
 
 .welcome {
-  padding: 50px 0;
+  padding-top: 50px;
       -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
