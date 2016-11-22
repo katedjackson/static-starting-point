@@ -10,7 +10,7 @@ function initialize_gmaps() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     // get the maps div's HTML obj
-    var map_canvas_obj = document.getElementById('map');
+    var map_canvas_obj = document.getElementById('map-canvas');
     // initialize a new Google Map with the options
     var map = new google.maps.Map(map_canvas_obj, mapOptions);
     // Add the marker to the map
