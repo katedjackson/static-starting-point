@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>Trip Planner - {% block title %}{% endblock %}</title>
+<title>Toboggan welcomes you to New York {% block title %}{% endblock %}</title>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster" rel="stylesheet">
     <link href="/stylesheets/toboggan.css" rel="stylesheet">
     <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO53EhdEU4fwX2FE3ouE1nZ6yKjPWoANo&sensor=true"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script src='../map.js'></script>
     <div id= "navbar"></div>
-</head>
-<body>
-<nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -20,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Toboggan</a>
+      <a class="navbar-brand lobster" href="#">Toboggan</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,10 +36,15 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#hotels">Hotels</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#activities">Activities</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+</head>
+<body>
 {% block content %}
 {% endblock %}
 <script src="/jquery/dist/jquery.min.js"></script>
@@ -49,7 +53,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.min.js"></script>
 <script type="text/javascript">
 $(function () {
-  $('[data-toggle="popover"]').popover({ html : true })
+  $('[data-toggle="popover"]').popover({ html : true });
+  $("body").scrollspy({target: ".navbar"});
 })
 </script>
 </body>

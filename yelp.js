@@ -52,22 +52,23 @@ var activities = ['Mahayana Temple Buddhist Association',  'Battery Park', 'Stat
 // });
 
 
-activities.forEach(function (activity) {
-  var imageurl;
-  yelp.search({term: activity, limit: 1, location: 'New York' })
-  .then(function (data) {
-    imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
-  })
-  .then(function() {
-    Activity.findOne({where: {name: activity}})
-    .then(function (foundActivity) {
-      foundActivity.update({image: imageurl})
-      .then(function (updatedActivity) {
-        console.log(`Updated image url for ${activity}! Hooray!`);
-      })
-    })
-  });
-});
+// activities.forEach(function (activity) {
+//   var imageurl;
+//   yelp.search({term: activity, limit: 1, location: 'New York' })
+//   .then(function (data) {
+//     imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//   })
+//   .then(function() {
+//     Activity.findOne({where: {name: activity}})
+//     .then(function (foundActivity) {
+//       foundActivity.update({image: imageurl})
+//       .then(function (updatedActivity) {
+//         console.log(`Updated image url for ${activity}! Hooray!`);
+//       })
+//     })
+//   });
+// });
+
 
   // yelp.search({term: 'Strand Bookstore', limit: 10, location: 'New York' })
   // .then(function (data) {
@@ -83,3 +84,11 @@ activities.forEach(function (activity) {
   //     })
   //   })
   // })
+
+    //   Activity.findOne({where: {name: 'Apple Store'}})
+    // .then(function (appleStore) {
+    //   appleStore.update({image: 'http://cbsnews1.cbsistatic.com/hub/i/2011/05/19/cf8d47be-a643-11e2-a3f0-029118418759/FifthAve-Apple.jpg'})
+    //   .then(function () {
+    //     console.log(`Updated image url! Hooray!`);
+    //   })
+    // })
