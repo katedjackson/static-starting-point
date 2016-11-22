@@ -52,22 +52,23 @@ var activities = ['Mahayana Temple Buddhist Association',  'Battery Park', 'Stat
 // });
 
 
-activities.forEach(function (activity) {
-  var imageurl;
-  yelp.search({term: activity, limit: 1, location: 'New York' })
-  .then(function (data) {
-    imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
-  })
-  .then(function() {
-    Activity.findOne({where: {name: activity}})
-    .then(function (foundActivity) {
-      foundActivity.update({image: imageurl})
-      .then(function (updatedActivity) {
-        console.log(`Updated image url for ${activity}! Hooray!`);
-      })
-    })
-  });
-});
+// activities.forEach(function (activity) {
+//   var imageurl;
+//   yelp.search({term: activity, limit: 1, location: 'New York' })
+//   .then(function (data) {
+//     imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//   })
+//   .then(function() {
+//     Activity.findOne({where: {name: activity}})
+//     .then(function (foundActivity) {
+//       foundActivity.update({image: imageurl})
+//       .then(function (updatedActivity) {
+//         console.log(`Updated image url for ${activity}! Hooray!`);
+//       })
+//     })
+//   });
+// });
+
 
   // yelp.search({term: 'Strand Bookstore', limit: 10, location: 'New York' })
   // .then(function (data) {
