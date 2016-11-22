@@ -37,6 +37,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#hotels">Hotels</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#activities">Activities</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -49,7 +52,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.min.js"></script>
 <script type="text/javascript">
 $(function () {
-  $('[data-toggle="popover"]').popover({ html : true })
+  $('[data-toggle="popover"]').popover({ html : true });
+  $("body").scrollspy({target: ".navbar"});
 })
 </script>
 </body>
