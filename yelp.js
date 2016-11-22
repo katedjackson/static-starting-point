@@ -17,49 +17,57 @@ var activities = ['Mahayana Temple Buddhist Association',  'Battery Park', 'Stat
 
 // 'South Street Seaport','Ground Zero', 'National September 11th Memorial & Museum', 'Brooklyn Bridge Park', 'Strand Bookstore'
 
-// See http://www.yelp.com/developers/documentation/v2/search_api
 // hotels.forEach(function (hotel) {
+//   var imageurl;
 //   yelp.search({term: hotel, limit: 1, location: 'New York' })
 //   .then(function (data) {
-//     large_image_url = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//     imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//   })
+//   .then(function() {
 //     Hotel.findOne({where: {name: hotel}})
 //     .then(function (foundHotel) {
-//       foundHotel.update({image: large_image_url})
+//       foundHotel.update({image: imageurl})
 //       .then(function (updatedHotel) {
 //         console.log(`Updated image url for ${hotel}! Hooray!`);
 //       })
 //     })
-//   })
+//   });
 // });
 
 // restos.forEach(function (restaurant) {
+//   var imageurl;
 //   yelp.search({term: restaurant, limit: 1, location: 'New York' })
 //   .then(function (data) {
-//     console.log(data.businesses[0].name);
-//     large_image_url = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//     imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+//   })
+//   .then(function() {
 //     Restaurant.findOne({where: {name: restaurant}})
 //     .then(function (foundRestaurant) {
-//       foundRestaurant.update({image: large_image_url})
+//       foundRestaurant.update({image: imageurl})
 //       .then(function (updatedRestaurant) {
 //         console.log(`Updated image url for ${restaurant}! Hooray!`);
 //       })
 //     })
-//   })
+//   });
 // });
 
-// activities.forEach(function (activity) {
-//   yelp.search({term: activity, limit: 1, location: 'New York' })
-//   .then(function (data) {
-//     large_image_url = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
-//     Activity.findOne({where: {name: activity}})
-//     .then(function (foundActivity) {
-//       foundActivity.update({image: large_image_url})
-//       .then(function (updatedActivity) {
-//         console.log(`Updated image url for ${activity}! Hooray!`);
-//       })
-//     })
-//   })
-// });
+
+activities.forEach(function (activity) {
+  var imageurl;
+  yelp.search({term: activity, limit: 1, location: 'New York' })
+  .then(function (data) {
+    imageurl = data.businesses[0].image_url.replace(/ms\.jpg/, 'l.jpg');
+  })
+  .then(function() {
+    Activity.findOne({where: {name: activity}})
+    .then(function (foundActivity) {
+      foundActivity.update({image: imageurl})
+      .then(function (updatedActivity) {
+        console.log(`Updated image url for ${activity}! Hooray!`);
+      })
+    })
+  });
+});
 
   // yelp.search({term: 'Strand Bookstore', limit: 10, location: 'New York' })
   // .then(function (data) {
