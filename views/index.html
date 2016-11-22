@@ -3,11 +3,10 @@
 {% block title %}Your Trip{% endblock %}
 
 {% block content %}
-<div id="wrapper">
+<div class = 'container-fluid' id ="wrapper">
     <div class="row">
-        <div class="col-lg-6" id="map">Map
-        </div>
-        <div class="col-lg-5" id="main-wrapper">
+        <div class="col-lg-6" id="map-canvas" style= "height: 100vh; width: 50%; padding-top: 55px;  margin-right: 15px; "></div>
+        <div class="col-lg-4" id="main-wrapper">
             <div class="pre-scrollable">
                 <h1>Toboggan</h1>
                 <div>
@@ -72,7 +71,7 @@ Nam bibendum augue sit amet tincidunt tempus. Maecenas ornare quam semper sapien
                     </div>
                 </div>
         </div>
-        <div class="col-lg-1" id="itinerary">
+        <div class="col-lg-1" id="itinerary">This is the itinerary.
         </div>
     </div>
 </div>
