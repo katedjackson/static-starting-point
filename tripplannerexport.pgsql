@@ -15,14 +15,14 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -35,7 +35,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: activities; Type: TABLE; Schema: public; Owner: csj
+-- Name: activities; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE activities (
@@ -49,10 +49,8 @@ CREATE TABLE activities (
 );
 
 
-ALTER TABLE activities OWNER TO csj;
-
 --
--- Name: activities_id_seq; Type: SEQUENCE; Schema: public; Owner: csj
+-- Name: activities_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE activities_id_seq
@@ -63,17 +61,15 @@ CREATE SEQUENCE activities_id_seq
     CACHE 1;
 
 
-ALTER TABLE activities_id_seq OWNER TO csj;
-
 --
--- Name: activities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: csj
+-- Name: activities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE activities_id_seq OWNED BY activities.id;
 
 
 --
--- Name: hotels; Type: TABLE; Schema: public; Owner: csj
+-- Name: hotels; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE hotels (
@@ -88,10 +84,8 @@ CREATE TABLE hotels (
 );
 
 
-ALTER TABLE hotels OWNER TO csj;
-
 --
--- Name: hotels_id_seq; Type: SEQUENCE; Schema: public; Owner: csj
+-- Name: hotels_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE hotels_id_seq
@@ -102,17 +96,15 @@ CREATE SEQUENCE hotels_id_seq
     CACHE 1;
 
 
-ALTER TABLE hotels_id_seq OWNER TO csj;
-
 --
--- Name: hotels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: csj
+-- Name: hotels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE hotels_id_seq OWNED BY hotels.id;
 
 
 --
--- Name: places; Type: TABLE; Schema: public; Owner: csj
+-- Name: places; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE places (
@@ -127,10 +119,8 @@ CREATE TABLE places (
 );
 
 
-ALTER TABLE places OWNER TO csj;
-
 --
--- Name: places_id_seq; Type: SEQUENCE; Schema: public; Owner: csj
+-- Name: places_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE places_id_seq
@@ -141,17 +131,15 @@ CREATE SEQUENCE places_id_seq
     CACHE 1;
 
 
-ALTER TABLE places_id_seq OWNER TO csj;
-
 --
--- Name: places_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: csj
+-- Name: places_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE places_id_seq OWNED BY places.id;
 
 
 --
--- Name: restaurants; Type: TABLE; Schema: public; Owner: csj
+-- Name: restaurants; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE restaurants (
@@ -166,10 +154,8 @@ CREATE TABLE restaurants (
 );
 
 
-ALTER TABLE restaurants OWNER TO csj;
-
 --
--- Name: restaurants_id_seq; Type: SEQUENCE; Schema: public; Owner: csj
+-- Name: restaurants_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE restaurants_id_seq
@@ -180,45 +166,43 @@ CREATE SEQUENCE restaurants_id_seq
     CACHE 1;
 
 
-ALTER TABLE restaurants_id_seq OWNER TO csj;
-
 --
--- Name: restaurants_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: csj
+-- Name: restaurants_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE restaurants_id_seq OWNED BY restaurants.id;
 
 
 --
--- Name: activities id; Type: DEFAULT; Schema: public; Owner: csj
+-- Name: activities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY activities ALTER COLUMN id SET DEFAULT nextval('activities_id_seq'::regclass);
 
 
 --
--- Name: hotels id; Type: DEFAULT; Schema: public; Owner: csj
+-- Name: hotels id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY hotels ALTER COLUMN id SET DEFAULT nextval('hotels_id_seq'::regclass);
 
 
 --
--- Name: places id; Type: DEFAULT; Schema: public; Owner: csj
+-- Name: places id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY places ALTER COLUMN id SET DEFAULT nextval('places_id_seq'::regclass);
 
 
 --
--- Name: restaurants id; Type: DEFAULT; Schema: public; Owner: csj
+-- Name: restaurants id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY restaurants ALTER COLUMN id SET DEFAULT nextval('restaurants_id_seq'::regclass);
 
 
 --
--- Data for Name: activities; Type: TABLE DATA; Schema: public; Owner: csj
+-- Data for Name: activities; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY activities (id, name, age_range, image, "createdAt", "updatedAt", "placeId") FROM stdin;
@@ -236,19 +220,19 @@ COPY activities (id, name, age_range, image, "createdAt", "updatedAt", "placeId"
 13	Washington Square Park	All	https://s3-media2.fl.yelpcdn.com/bphoto/7vKSqmapAZY8iGGo6YcHzA/l.jpg	2016-11-21 21:29:48.098-05	2016-11-21 22:18:10.304-05	43
 1	Mahayana Temple Buddhist Association	All	https://s3-media1.fl.yelpcdn.com/bphoto/eDZsSguQzvkl0iJhfLR_PA/l.jpg	2016-11-21 21:29:48.092-05	2016-11-21 22:18:10.341-05	31
 12	Ellis Island Immigration Museum	All	https://s3-media2.fl.yelpcdn.com/bphoto/ikUsgG4B75UdryrFn2HAiw/l.jpg	2016-11-21 21:29:48.098-05	2016-11-21 22:18:10.341-05	42
-10	Apple Store	All	https://s3-media1.fl.yelpcdn.com/bphoto/t-68wI073ES8LRfUwub5rQ/l.jpg	2016-11-21 21:29:48.097-05	2016-11-21 22:18:10.342-05	40
+10	Apple Store	All	http://cbsnews1.cbsistatic.com/hub/i/2011/05/19/cf8d47be-a643-11e2-a3f0-029118418759/FifthAve-Apple.jpg	2016-11-21 21:29:48.097-05	2016-11-22 00:00:52.791-05	40
 \.
 
 
 --
--- Name: activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: csj
+-- Name: activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('activities_id_seq', 15, true);
 
 
 --
--- Data for Name: hotels; Type: TABLE DATA; Schema: public; Owner: csj
+-- Data for Name: hotels; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY hotels (id, name, num_stars, amenities, image, "createdAt", "updatedAt", "placeId") FROM stdin;
@@ -271,14 +255,14 @@ COPY hotels (id, name, num_stars, amenities, image, "createdAt", "updatedAt", "p
 
 
 --
--- Name: hotels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: csj
+-- Name: hotels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('hotels_id_seq', 15, true);
 
 
 --
--- Data for Name: places; Type: TABLE DATA; Schema: public; Owner: csj
+-- Data for Name: places; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY places (id, address, city, state, phone, location, "createdAt", "updatedAt") FROM stdin;
@@ -331,14 +315,14 @@ COPY places (id, address, city, state, phone, location, "createdAt", "updatedAt"
 
 
 --
--- Name: places_id_seq; Type: SEQUENCE SET; Schema: public; Owner: csj
+-- Name: places_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('places_id_seq', 45, true);
 
 
 --
--- Data for Name: restaurants; Type: TABLE DATA; Schema: public; Owner: csj
+-- Data for Name: restaurants; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY restaurants (id, name, cuisine, price, image, "createdAt", "updatedAt", "placeId") FROM stdin;
@@ -361,14 +345,14 @@ COPY restaurants (id, name, cuisine, price, image, "createdAt", "updatedAt", "pl
 
 
 --
--- Name: restaurants_id_seq; Type: SEQUENCE SET; Schema: public; Owner: csj
+-- Name: restaurants_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('restaurants_id_seq', 15, true);
 
 
 --
--- Name: activities activities_pkey; Type: CONSTRAINT; Schema: public; Owner: csj
+-- Name: activities activities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY activities
@@ -376,7 +360,7 @@ ALTER TABLE ONLY activities
 
 
 --
--- Name: hotels hotels_pkey; Type: CONSTRAINT; Schema: public; Owner: csj
+-- Name: hotels hotels_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY hotels
@@ -384,7 +368,7 @@ ALTER TABLE ONLY hotels
 
 
 --
--- Name: places places_pkey; Type: CONSTRAINT; Schema: public; Owner: csj
+-- Name: places places_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY places
@@ -392,7 +376,7 @@ ALTER TABLE ONLY places
 
 
 --
--- Name: restaurants restaurants_pkey; Type: CONSTRAINT; Schema: public; Owner: csj
+-- Name: restaurants restaurants_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY restaurants
@@ -400,7 +384,7 @@ ALTER TABLE ONLY restaurants
 
 
 --
--- Name: activities activities_placeId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: csj
+-- Name: activities activities_placeId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY activities
@@ -408,7 +392,7 @@ ALTER TABLE ONLY activities
 
 
 --
--- Name: hotels hotels_placeId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: csj
+-- Name: hotels hotels_placeId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY hotels
@@ -416,7 +400,7 @@ ALTER TABLE ONLY hotels
 
 
 --
--- Name: restaurants restaurants_placeId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: csj
+-- Name: restaurants restaurants_placeId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY restaurants
