@@ -3,34 +3,77 @@
 {% block title %}Your Trip{% endblock %}
 
 {% block content %}
-<div id="scroll_select" class="clearfix">
-    <h1>Toboggan</h1>
-    <div>
-        <div id="hotels">
-        	<select name="hotels">
-        	{% for hotel in hotels %}
-        	<option value="{{hotel.name}}">{{hotel.name}}</option>
-        	{% endfor %}
-        	</select>
+<div id="wrapper">
+    <div class="row">
+        <div class="col-lg-6" id="map" class="sidebar-wrapper">
         </div>
+        <div class="col-lg-5" id="main-wrapper">
+            <div class="pre-scrollable">
+                <h1>Toboggan</h1>
+                <div>
+                    <div id="hotels">
+                        <div> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh justo. Vivamus quis odio condimentum, sodales tortor sit amet, vestibulum orci. In ultricies, mauris id porta pulvinar, massa felis sodales diam, id ultricies sem felis ac orci. Curabitur bibendum imperdiet mattis. Integer et lacus semper, pulvinar eros eget, lobortis est. Sed erat arcu, convallis sit amet luctus nec, bibendum at est. Donec metus ligula, sagittis sit amet nulla ut, vehicula dictum mauris. Vivamus eu lorem condimentum, fringilla lacus id, tincidunt diam. Suspendisse dictum elementum nulla suscipit pulvinar. Vivamus commodo arcu et diam luctus, at euismod leo pretium. Duis eu sem a leo faucibus rutrum. Nam quis justo a nisl facilisis vulputate. Nunc bibendum nulla sed mollis dignissim. Aliquam erat volutpat.
 
-        <div id="restaurants">
-        	<select name="restaurants">
-        	{% for restaurant in restaurants %}
-        	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
-        	{% endfor %}
-        	</select>
+Proin condimentum nulla eget lacus mollis pretium. Fusce imperdiet urna in tristique pharetra. Donec tristique, lacus egestas pharetra finibus, orci odio mollis urna, nec dapibus ligula massa tristique nunc. Vestibulum imperdiet, ipsum vel posuere semper, turpis ligula vehicula massa, eu malesuada eros purus id velit. In hac habitasse platea dictumst. Nulla eget tempor turpis, nec rutrum dolor. Sed mattis ipsum ut nunc bibendum, sit amet euismod lorem aliquam.
+
+Vivamus accumsan ipsum vitae nisi tempus accumsan. Maecenas congue turpis eu augue luctus, eget lacinia magna ullamcorper. Sed eget felis ex. Fusce placerat aliquam leo vel iaculis. Vivamus at urna malesuada arcu venenatis accumsan. Proin quis sapien sapien. Pellentesque vehicula laoreet arcu non blandit. Donec eros dui, tempor pretium bibendum sed, bibendum at ligula.
+
+Duis pellentesque enim quis leo porttitor viverra. Donec hendrerit nec elit tincidunt feugiat. Nulla vel facilisis dui, nec volutpat mi. Donec dolor augue, rutrum sed condimentum vitae, cursus nec leo. Suspendisse egestas hendrerit aliquam. Proin at commodo felis. Fusce consectetur laoreet mi, et cursus orci varius ac.
+
+Nam bibendum augue sit amet tincidunt tempus. Maecenas ornare quam semper sapien auctor auctor. Ut vel lectus nec risus accumsan volutpat. Sed efficitur feugiat nisl a eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque mauris turpis, rutrum eget tellus a, tempor pharetra sapien. Sed ac elementum libero. Duis dui sem, viverra eu urna aliquam, tincidunt volutpat augue. Vivamus consectetur purus a erat euismod, quis fermentum diam commodo. Etiam hendrerit nibh a tortor placerat ultrices vitae eu purus. Cras nisi ante, auctor non lobortis sed, rhoncus eu enim. Sed scelerisque quam id magna accumsan hendrerit. Morbi suscipit euismod tempor. Pellentesque et dignissim mauris. Etiam tempor ullamcorper nulla sed molestie. Etiam sed odio sit amet dui consectetur ultrices a vitae ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh justo. Vivamus quis odio condimentum, sodales tortor sit amet, vestibulum orci. In ultricies, mauris id porta pulvinar, massa felis sodales diam, id ultricies sem felis ac orci. Curabitur bibendum imperdiet mattis. Integer et lacus semper, pulvinar eros eget, lobortis est. Sed erat arcu, convallis sit amet luctus nec, bibendum at est. Donec metus ligula, sagittis sit amet nulla ut, vehicula dictum mauris. Vivamus eu lorem condimentum, fringilla lacus id, tincidunt diam. Suspendisse dictum elementum nulla suscipit pulvinar. Vivamus commodo arcu et diam luctus, at euismod leo pretium. Duis eu sem a leo faucibus rutrum. Nam quis justo a nisl facilisis vulputate. Nunc bibendum nulla sed mollis dignissim. Aliquam erat volutpat.
+
+Proin condimentum nulla eget lacus mollis pretium. Fusce imperdiet urna in tristique pharetra. Donec tristique, lacus egestas pharetra finibus, orci odio mollis urna, nec dapibus ligula massa tristique nunc. Vestibulum imperdiet, ipsum vel posuere semper, turpis ligula vehicula massa, eu malesuada eros purus id velit. In hac habitasse platea dictumst. Nulla eget tempor turpis, nec rutrum dolor. Sed mattis ipsum ut nunc bibendum, sit amet euismod lorem aliquam.
+
+Vivamus accumsan ipsum vitae nisi tempus accumsan. Maecenas congue turpis eu augue luctus, eget lacinia magna ullamcorper. Sed eget felis ex. Fusce placerat aliquam leo vel iaculis. Vivamus at urna malesuada arcu venenatis accumsan. Proin quis sapien sapien. Pellentesque vehicula laoreet arcu non blandit. Donec eros dui, tempor pretium bibendum sed, bibendum at ligula.
+
+Duis pellentesque enim quis leo porttitor viverra. Donec hendrerit nec elit tincidunt feugiat. Nulla vel facilisis dui, nec volutpat mi. Donec dolor augue, rutrum sed condimentum vitae, cursus nec leo. Suspendisse egestas hendrerit aliquam. Proin at commodo felis. Fusce consectetur laoreet mi, et cursus orci varius ac.
+
+Nam bibendum augue sit amet tincidunt tempus. Maecenas ornare quam semper sapien auctor auctor. Ut vel lectus nec risus accumsan volutpat. Sed efficitur feugiat nisl a eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque mauris turpis, rutrum eget tellus a, tempor pharetra sapien. Sed ac elementum libero. Duis dui sem, viverra eu urna aliquam, tincidunt volutpat augue. Vivamus consectetur purus a erat euismod, quis fermentum diam commodo. Etiam hendrerit nibh a tortor placerat ultrices vitae eu purus. Cras nisi ante, auctor non lobortis sed, rhoncus eu enim. Sed scelerisque quam id magna accumsan hendrerit. Morbi suscipit euismod tempor. Pellentesque et dignissim mauris. Etiam tempor ullamcorper nulla sed molestie. Etiam sed odio sit amet dui consectetur ultrices a vitae ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh justo. Vivamus quis odio condimentum, sodales tortor sit amet, vestibulum orci. In ultricies, mauris id porta pulvinar, massa felis sodales diam, id ultricies sem felis ac orci. Curabitur bibendum imperdiet mattis. Integer et lacus semper, pulvinar eros eget, lobortis est. Sed erat arcu, convallis sit amet luctus nec, bibendum at est. Donec metus ligula, sagittis sit amet nulla ut, vehicula dictum mauris. Vivamus eu lorem condimentum, fringilla lacus id, tincidunt diam. Suspendisse dictum elementum nulla suscipit pulvinar. Vivamus commodo arcu et diam luctus, at euismod leo pretium. Duis eu sem a leo faucibus rutrum. Nam quis justo a nisl facilisis vulputate. Nunc bibendum nulla sed mollis dignissim. Aliquam erat volutpat.
+
+Proin condimentum nulla eget lacus mollis pretium. Fusce imperdiet urna in tristique pharetra. Donec tristique, lacus egestas pharetra finibus, orci odio mollis urna, nec dapibus ligula massa tristique nunc. Vestibulum imperdiet, ipsum vel posuere semper, turpis ligula vehicula massa, eu malesuada eros purus id velit. In hac habitasse platea dictumst. Nulla eget tempor turpis, nec rutrum dolor. Sed mattis ipsum ut nunc bibendum, sit amet euismod lorem aliquam.
+
+Vivamus accumsan ipsum vitae nisi tempus accumsan. Maecenas congue turpis eu augue luctus, eget lacinia magna ullamcorper. Sed eget felis ex. Fusce placerat aliquam leo vel iaculis. Vivamus at urna malesuada arcu venenatis accumsan. Proin quis sapien sapien. Pellentesque vehicula laoreet arcu non blandit. Donec eros dui, tempor pretium bibendum sed, bibendum at ligula.
+
+Duis pellentesque enim quis leo porttitor viverra. Donec hendrerit nec elit tincidunt feugiat. Nulla vel facilisis dui, nec volutpat mi. Donec dolor augue, rutrum sed condimentum vitae, cursus nec leo. Suspendisse egestas hendrerit aliquam. Proin at commodo felis. Fusce consectetur laoreet mi, et cursus orci varius ac.
+
+Nam bibendum augue sit amet tincidunt tempus. Maecenas ornare quam semper sapien auctor auctor. Ut vel lectus nec risus accumsan volutpat. Sed efficitur feugiat nisl a eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque mauris turpis, rutrum eget tellus a, tempor pharetra sapien. Sed ac elementum libero. Duis dui sem, viverra eu urna aliquam, tincidunt volutpat augue. Vivamus consectetur purus a erat euismod, quis fermentum diam commodo. Etiam hendrerit nibh a tortor placerat ultrices vitae eu purus. Cras nisi ante, auctor non lobortis sed, rhoncus eu enim. Sed scelerisque quam id magna accumsan hendrerit. Morbi suscipit euismod tempor. Pellentesque et dignissim mauris. Etiam tempor ullamcorper nulla sed molestie. Etiam sed odio sit amet dui consectetur ultrices a vitae ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh justo. Vivamus quis odio condimentum, sodales tortor sit amet, vestibulum orci. In ultricies, mauris id porta pulvinar, massa felis sodales diam, id ultricies sem felis ac orci. Curabitur bibendum imperdiet mattis. Integer et lacus semper, pulvinar eros eget, lobortis est. Sed erat arcu, convallis sit amet luctus nec, bibendum at est. Donec metus ligula, sagittis sit amet nulla ut, vehicula dictum mauris. Vivamus eu lorem condimentum, fringilla lacus id, tincidunt diam. Suspendisse dictum elementum nulla suscipit pulvinar. Vivamus commodo arcu et diam luctus, at euismod leo pretium. Duis eu sem a leo faucibus rutrum. Nam quis justo a nisl facilisis vulputate. Nunc bibendum nulla sed mollis dignissim. Aliquam erat volutpat.
+
+Proin condimentum nulla eget lacus mollis pretium. Fusce imperdiet urna in tristique pharetra. Donec tristique, lacus egestas pharetra finibus, orci odio mollis urna, nec dapibus ligula massa tristique nunc. Vestibulum imperdiet, ipsum vel posuere semper, turpis ligula vehicula massa, eu malesuada eros purus id velit. In hac habitasse platea dictumst. Nulla eget tempor turpis, nec rutrum dolor. Sed mattis ipsum ut nunc bibendum, sit amet euismod lorem aliquam.
+
+Vivamus accumsan ipsum vitae nisi tempus accumsan. Maecenas congue turpis eu augue luctus, eget lacinia magna ullamcorper. Sed eget felis ex. Fusce placerat aliquam leo vel iaculis. Vivamus at urna malesuada arcu venenatis accumsan. Proin quis sapien sapien. Pellentesque vehicula laoreet arcu non blandit. Donec eros dui, tempor pretium bibendum sed, bibendum at ligula.
+
+Duis pellentesque enim quis leo porttitor viverra. Donec hendrerit nec elit tincidunt feugiat. Nulla vel facilisis dui, nec volutpat mi. Donec dolor augue, rutrum sed condimentum vitae, cursus nec leo. Suspendisse egestas hendrerit aliquam. Proin at commodo felis. Fusce consectetur laoreet mi, et cursus orci varius ac.
+
+Nam bibendum augue sit amet tincidunt tempus. Maecenas ornare quam semper sapien auctor auctor. Ut vel lectus nec risus accumsan volutpat. Sed efficitur feugiat nisl a eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque mauris turpis, rutrum eget tellus a, tempor pharetra sapien. Sed ac elementum libero. Duis dui sem, viverra eu urna aliquam, tincidunt volutpat augue. Vivamus consectetur purus a erat euismod, quis fermentum diam commodo. Etiam hendrerit nibh a tortor placerat ultrices vitae eu purus. Cras nisi ante, auctor non lobortis sed, rhoncus eu enim. Sed scelerisque quam id magna accumsan hendrerit. Morbi suscipit euismod tempor. Pellentesque et dignissim mauris. Etiam tempor ullamcorper nulla sed molestie. Etiam sed odio sit amet dui consectetur ultrices a vitae ipsum.
+                        </div>
+                    	<select name="hotels">
+                    	{% for hotel in hotels %}
+                    	<option value="{{hotel.name}}">{{hotel.name}}</option>
+                    	{% endfor %}
+                    	</select>
+                    </div>
+                    </div>
+
+                    <div id="restaurants">
+                    	<select name="restaurants">
+                    	{% for restaurant in restaurants %}
+                    	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
+                    	{% endfor %}
+                    	</select>
+                    </div>
+
+                    <div id="activities">
+                    	<select name="activities">
+                    	{% for activity in activities %}
+                    	<option value="{{activity.name}}">{{activity.name}}</option>
+                    	{% endfor %}
+                    	</select>
+                    </div>
+                </div>
         </div>
-
-        <div id="activities">
-        	<select name="activities">
-        	{% for activity in activities %}
-        	<option value="{{activity.name}}">{{activity.name}}</option>
-        	{% endfor %}
-        	</select>
+        <div class="col-lg-1" id="itinerary">
         </div>
     </div>
-</div>
-<div id="itinerary">
 </div>
 {% endblock %}
