@@ -5,12 +5,9 @@
 {% block content %}
 <div class = 'container-fluid' id ="wrapper">
     <div class="row">
-<<<<<<< HEAD
         <div class="col-lg-6" id="map-canvas" style= "height: 100vh; width: 50%; padding-top: 55px;  margin-right: 15px; "></div>
-=======
         <div class="col-lg-6" id="map">Map
         </div>
->>>>>>> e07782e5fdeec82b55d754571ebb6e007df668f4
         <div class="col-lg-4" id="main-wrapper">
             <div class="pre-scrollable">
                 <h1 class="text-center">Welcome to Toboggan</h1>
@@ -19,7 +16,7 @@
                     <h2 class="text-center"> Where would you like to stay? </h2>
                         {% for hotel in hotels %}
                         <a href="#"><img src={{hotel.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover"/></a>
-                        {% endfor %}                        
+                        {% endfor %}
 <!--                     	<select name="hotels">
                     	{% for hotel in hotels %}
                     	<option value="{{hotel.name}}">{{hotel.name}}</option>
@@ -44,11 +41,9 @@
                     </div>
                 </div>
         </div>
-<<<<<<< HEAD
+
         <div class="col-lg-1" id="itinerary">This is the itinerary.
-=======
         <div class="col-lg-2" id="itinerary">
->>>>>>> e07782e5fdeec82b55d754571ebb6e007df668f4
         </div>
     </div>
 </div>
