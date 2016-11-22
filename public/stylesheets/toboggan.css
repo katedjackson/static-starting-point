@@ -13,8 +13,7 @@ html, body {
   font-family: 'Josefin Slab', serif !important; }
 
 .jumbotron {
-  margin: 20px 0;
-}
+  margin: 20px 0; }
 
 #wrapper {
   min-height: 100%;
@@ -30,7 +29,7 @@ html, body {
 
 .pre-scrollable {
   flex: 1;
-  max-height: 95% !important;
+  max-height: 100% !important;
   margin-right: -15%; }
 
 .pre-scrollable::-webkit-scrollbar {
@@ -118,9 +117,10 @@ h4 {
   display: table;
   clear: both; }
 
-.navbar-brand img {
+.navbar-brand * {
   height: 120%;
-  width: auto; }
+  width: auto;
+  padding-right: 5%; }
 
 @media (max-width: 400px) {
   .assetimages {
