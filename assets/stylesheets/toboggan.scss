@@ -3,8 +3,9 @@
   height: 400px;
 }
 
-body {
+html, body {
 	overflow: hidden;
+	height: 100%;
 }
 
 #wrapper {
@@ -14,16 +15,22 @@ body {
     position: absolute;
     top: 0px;
     left: 0;
-    display: inline-block;
 }
 
 #main-wrapper {
-	height: 100%;
-    padding: 100px 0 0px 0;
+	height: 100vh;
+    padding: 70px 0 0px 0;
+    display: flex;
 }
 
 .pre-scrollable {
-	height: ;	
+	flex: 1;
+	max-height: 95%;
+
+}
+
+.pre-scrollable::-webkit-scrollbar {
+display: none;
 }
 
 .sidebar-wrapper {
@@ -36,7 +43,13 @@ body {
 
 map, itinerary {
 	position: relative;
-    height: 100%;
+    flex: 1;
     overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  #main-wrapper {
+    flex-direction: column;
+  }
 }
 
