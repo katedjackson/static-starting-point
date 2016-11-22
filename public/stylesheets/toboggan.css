@@ -13,7 +13,8 @@ html, body {
   font-family: 'Josefin Slab', serif !important; }
 
 .jumbotron {
-  margin: 20px 0; }
+  margin: 20px 0;
+}
 
 #wrapper {
   min-height: 100%;
