@@ -24,11 +24,15 @@
                     </div>
 
                     <div id="restaurants">
-                    	<select name="restaurants">
+                    <h2 class="text-center"> And where would you like to dine? </h2>
+                        {% for restaurant in restaurants %}
+                        <a href="#"><img src={{restaurant.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover"/></a>
+                        {% endfor %}   
+<!--                     	<select name="restaurants">
                     	{% for restaurant in restaurants %}
                     	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
                     	{% endfor %}
-                    	</select>
+                    	</select> -->
                     </div>
 
                     <div id="activities">
