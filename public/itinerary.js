@@ -3,7 +3,7 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("img", ev.target.id);
 }
 
 function drop(ev) {
@@ -12,6 +12,6 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
-$(document).ready(function() {
+$(function() {
     allowDrop();
 });

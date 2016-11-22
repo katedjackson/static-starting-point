@@ -3,7 +3,9 @@ nav {
 
 .row {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  padding: 0px;
+  margin: 0px; }
 
 html, body {
   margin: 0;
@@ -20,7 +22,8 @@ html, body {
   height: 100%;
   width: 100%;
   top: 50px;
-  margin: 0px; }
+  margin: 0px;
+  padding: 0px; }
 
 #main-wrapper {
   height: 100vh;
@@ -47,7 +50,8 @@ html, body {
   width: 15%;
   z-index: -1;
   padding-top: 50px;
-  margin: 0px; }
+  margin: 0px;
+  background-color: #448888; }
 
 @media (max-width: 800px) {
   #main-wrapper {

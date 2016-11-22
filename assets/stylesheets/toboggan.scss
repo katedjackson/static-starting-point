@@ -5,6 +5,8 @@ nav {
 .row {
   height: 100%;
   width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 
@@ -26,6 +28,7 @@ html, body {
     width: 100%;
     top: 50px;
     margin: 0px;
+  padding: 0px;
 }
 
 #main-wrapper {
@@ -58,6 +61,7 @@ html, body {
   z-index: -1;
   padding-top: 50px;
   margin: 0px;
+  background-color: #448888;
 }
 
 @media (max-width: 800px) {
