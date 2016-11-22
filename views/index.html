@@ -3,11 +3,12 @@
 {% block title %}Your Trip{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div id="wrapper">
     <div class="row">
-        <div class="col-lg-6" id="map">
+        <div class="col-lg-6" id="map" class="sidebar-wrapper">
         </div>
-        <div class="col-lg-5 clearfix" id="scrolling">
+        <div class="col-lg-5" id="main-wrapper">
+            <div class="pre-scrollable">
                 <h1>Toboggan</h1>
                 <div>
                     <div id="hotels">
@@ -51,6 +52,7 @@ Nam bibendum augue sit amet tincidunt tempus. Maecenas ornare quam semper sapien
                     	<option value="{{hotel.name}}">{{hotel.name}}</option>
                     	{% endfor %}
                     	</select>
+                    </div>
                     </div>
 
                     <div id="restaurants">
