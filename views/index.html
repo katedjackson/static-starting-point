@@ -17,6 +17,8 @@
                 <div>
                     <div id="hotels">
                     <h2 class="text-center"> Where would you like to stay? </h2>
+                        <h4 class="text-center"><em>(Mouse over for more details)</em></h4>
+
                         {% for hotel in hotels %}
                         <a href="#"><img src={{hotel.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover"/></a>
                         {% endfor %}                        
@@ -29,6 +31,7 @@
 
                     <div id="restaurants">
                     <h2 class="text-center"> And where would you like to dine? </h2>
+                        <h4 class="text-center"><em>(Mouse over for more details)</em></h4>
                         {% for restaurant in restaurants %}
                         <a href="#"><img src={{restaurant.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover"/></a>
                         {% endfor %}   
@@ -40,11 +43,17 @@
                     </div>
 
                     <div id="activities">
-                    	<select name="activities">
+                        <h2 class="text-center"> How would you like to make merry? </h2>
+                        <h4 class="text-center"><em>(Mouse over for more details)</em></h4>
+
+                        {% for activity in activities %}
+                        <a href="#"><img src={{activity.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" data-trigger="hover"/></a>
+                        {% endfor %}  
+<!--                     	<select name="activities">
                     	{% for activity in activities %}
                     	<option value="{{activity.name}}">{{activity.name}}</option>
                     	{% endfor %}
-                    	</select>
+                    	</select> -->
                     </div>
                 </div>
         </div>

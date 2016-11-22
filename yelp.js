@@ -84,3 +84,11 @@ var activities = ['Mahayana Temple Buddhist Association',  'Battery Park', 'Stat
   //     })
   //   })
   // })
+
+    //   Activity.findOne({where: {name: 'Apple Store'}})
+    // .then(function (appleStore) {
+    //   appleStore.update({image: 'http://cbsnews1.cbsistatic.com/hub/i/2011/05/19/cf8d47be-a643-11e2-a3f0-029118418759/FifthAve-Apple.jpg'})
+    //   .then(function () {
+    //     console.log(`Updated image url! Hooray!`);
+    //   })
+    // })
