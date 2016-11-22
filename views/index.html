@@ -9,21 +9,18 @@
         </div>
         <div class="col-lg-4" id="main-wrapper">
             <div class="pre-scrollable">
-                <h1>Toboggan</h1>
+                <h1 class="text-center">Welcome to Toboggan</h1>
                 <div>
                     <div id="hotels">
-                        <div>
+                    <h2 class="text-center"> Where would you like to stay? </h2>
                         {% for hotel in hotels %}
-                        <div class="col-lg-4">
-                        <img src={{hotel.image}} class="img-rounded img-responsive" data-toggle="tooltip" data-placement="top" title="{{hotel.name}}"/>
-                        </div>
+                        <a href="#"><img src={{hotel.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover"/></a>
                         {% endfor %}                        
 <!--                     	<select name="hotels">
                     	{% for hotel in hotels %}
                     	<option value="{{hotel.name}}">{{hotel.name}}</option>
                     	{% endfor %}
                     	</select> -->
-                    </div>
                     </div>
 
                     <div id="restaurants">
