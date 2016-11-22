@@ -15,7 +15,8 @@
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.27.0",
-    "volleyball": "^1.4.1"
+    "volleyball": "^1.4.1",
+    "yelp": "^1.0.1"
   },
   "devDependencies": {
     "node-sass": "^3.13.0",

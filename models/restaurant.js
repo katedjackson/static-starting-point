@@ -13,6 +13,10 @@ const Restaurant = dbConnection.define('restaurant', {
     price: { //integer from 1-5 for how many dollar signs
     	type: Sequelize.INTEGER,
     	allowNull: false
+    }, 
+    image: {
+        type: Sequelize.STRING,
+        defaultValue: null,
     }
 });
 

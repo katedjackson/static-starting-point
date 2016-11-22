@@ -12,6 +12,10 @@ const Hotel = dbConnection.define('hotel', {
     }, 
     amenities: {//string of comma delimited items
     	type: Sequelize.STRING
+    }, 
+    image: {
+        type: Sequelize.STRING,
+        defaultValue: null,
     }
 });
 
