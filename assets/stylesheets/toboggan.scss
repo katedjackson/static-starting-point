@@ -36,8 +36,8 @@ html, body {
 
 .pre-scrollable {
 	flex: 1;
-	max-height: 95%;
-
+	max-height: 95% !important;
+  margin-right: -20%;
 }
 
 .pre-scrollable::-webkit-scrollbar {
@@ -51,6 +51,9 @@ display: none;
     border-right: 1px solid gray;
 }
 
+.img-rounded {
+  max-width: 100%;
+}
 
 #itinerary {
 	position: relative;
@@ -66,11 +69,5 @@ display: none;
   }
 }
 
-#map-canvas {
-  position: absolute !important;
-  height: 700px !important;
-  width: 600px !important;
-  padding: 100px !important;
-}
 
 

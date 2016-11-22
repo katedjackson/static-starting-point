@@ -21,7 +21,8 @@ html, body {
 
 .pre-scrollable {
   flex: 1;
-  max-height: 95%; }
+  max-height: 95% !important;
+  margin-right: -20%; }
 
 .pre-scrollable::-webkit-scrollbar {
   display: none; }
@@ -32,6 +33,9 @@ html, body {
   position: fixed;
   border-right: 1px solid gray; }
 
+.img-rounded {
+  max-width: 100%; }
+
 map, itinerary {
   position: relative;
   flex: 1;
@@ -40,3 +44,8 @@ map, itinerary {
 @media (max-width: 800px) {
   #main-wrapper {
     flex-direction: column; } }
+
+map {
+  padding-top: 20px;
+  height: 100%;
+  width: 30%; }
