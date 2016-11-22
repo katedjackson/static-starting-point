@@ -9,6 +9,10 @@ const Activity = dbConnection.define('activity', {
     age_range: { //data-type string
     	type: Sequelize.STRING,
         allowNull: false
+    }, 
+    image: {
+        type: Sequelize.STRING,
+        defaultValue: null,
     }
 });
 
