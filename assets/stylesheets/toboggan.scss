@@ -64,12 +64,6 @@ html, body {
   margin-left: -15px; 
 }
 
-@media (max-width: 800px) {
-  #main-wrapper {
-    flex-direction: column;
-  }
-}
-
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
 
@@ -85,35 +79,6 @@ h2 {
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 }
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-    }
 
 .lobster {
   font-family: 'Lobster', cursive;
@@ -163,16 +128,19 @@ h2 {
 h4 {
   padding-bottom: 30px;
 }
-@media (max-width: 400px) {
-  .assetimages {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
-}
 
 .group:after {
   content: "";
   display: table;
   clear: both;
 }
+
+.navbar-brand {
+  img {
+  height: 120%;
+  width: auto;
+  }
+}
+
+
+@import "media-queries";

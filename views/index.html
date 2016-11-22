@@ -5,7 +5,7 @@
 {% block content %}
 <div class = 'container-fluid' id ="wrapper">
     <div class="row">
-        <div class="col-lg-6" id="map" style= "height: 100vh; width: 50%; padding-top: 55px;  margin-right: 15px; "></div>
+        <div class="col-lg-6" id="map-canvas"></div>
         <div class="col-lg-4" id="main-wrapper">
             <div class="pre-scrollable text-center" data-spy="scroll" data-target=".navbar" data-offset="50">
             <div class="welcome jumbotron">
@@ -16,22 +16,18 @@
                 <a href="#hotels"><button class="btn btn-success btn-lg">I'm ready; let's go!  <span class="glyphicon glyphicon-plane"></span></button></a>
             </div>
                     <div id="hotels">
-                    <h2 class="text-center"> Where would you like to stay? </h2>
-                        {% for hotel in hotels %}
-                        <a href="#"><img src={{hotel.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover"/></a>
-                        {% endfor %}
                         <h2 class="text-center"> Where would you like to stay? </h2>
                             <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                             <div class="assetimages">
                             {% for hotel in hotels %}
                             <a href="#"><img src={{hotel.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover"/></a>
-                            {% endfor %}
-                        </div>
-<!--                     	<select name="hotels">
-                    	{% for hotel in hotels %}
-                    	<option value="{{hotel.name}}">{{hotel.name}}</option>
-                    	{% endfor %}
-                    	</select> -->
+                            {% endfor %}  
+                        </div>                      
+<!--                        <select name="hotels">
+                        {% for hotel in hotels %}
+                        <option value="{{hotel.name}}">{{hotel.name}}</option>
+                        {% endfor %}
+                        </select> -->
                     </div>
 
                     <div id="restaurants">
@@ -40,13 +36,13 @@
                         <div class="assetimages">
                         {% for restaurant in restaurants %}
                         <a href="#"><img src={{restaurant.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover"/></a>
-                        {% endfor %}
+                        {% endfor %}   
                         </div>
-<!--                     	<select name="restaurants">
-                    	{% for restaurant in restaurants %}
-                    	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
-                    	{% endfor %}
-                    	</select> -->
+<!--                        <select name="restaurants">
+                        {% for restaurant in restaurants %}
+                        <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+                        {% endfor %}
+                        </select> -->
                     </div>
 
                     <div id="activities">
@@ -55,17 +51,19 @@
                         <div class="assetimages">
                         {% for activity in activities %}
                         <a href="#"><img src={{activity.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" data-trigger="hover"/></a>
-                        {% endfor %}
+                        {% endfor %}  
                         </div>
-<!--                     	<select name="activities">
-                    	{% for activity in activities %}
-                    	<option value="{{activity.name}}">{{activity.name}}</option>
-                    	{% endfor %}
-                    	</select> -->
-                    </div>
+<!--                        <select name="activities">
+                        {% for activity in activities %}
+                        <option value="{{activity.name}}">{{activity.name}}</option>
+                        {% endfor %}
+                        </select> -->
+                    </div>  
                 </div>
         </div>
-        <div class="col-lg-2 " id="itinerary"></div>
+        <div class="col-lg-2 " id="itinerary">
+        </div>
     </div>
 </div>
 {% endblock %}
+
