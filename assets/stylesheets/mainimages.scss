@@ -1,0 +1,39 @@
+.assetimages {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 2;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    2;
+  -moz-column-gap:      0px;
+  column-count:         2;
+  column-gap:           0px;
+  z-index: 0;
+  * {
+    /* to handle inline attribs */
+    width: 100% !important;
+    height: auto !important;
+    padding: 8px;
+  }
+
+}
+
+.grow {
+  transition: all .3s ease-in-out; 
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.img-rounded {
+  @extend .grow;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

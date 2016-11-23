@@ -1,0 +1,49 @@
+#main-wrapper {
+  height: 100vh;
+  padding: 0;
+  display: flex; }
+
+.pre-scrollable {
+  flex: 1;
+  max-height: 100% !important;
+  margin-right: -15%; }
+  .pre-scrollable::-webkit-scrollbar {
+    display: none; }
+
+#hotels::before, #restaurants::before, #activities::before {
+  display: block;
+  content: " ";
+  margin-top: -45px;
+  height: 45px;
+  visibility: hidden; }
+
+.assetimages {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 2;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  column-gap: 0px;
+  z-index: 0; }
+  .assetimages * {
+    /* to handle inline attribs */
+    width: 100% !important;
+    height: auto !important;
+    padding: 8px; }
+
+.grow, .img-rounded {
+  transition: all .3s ease-in-out; }
+  .grow:hover, .img-rounded:hover {
+    transform: scale(1.5); }
+
+.img-rounded {
+  display: inline-block;
+  z-index: 1;
+  position: relative; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }

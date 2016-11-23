@@ -1,0 +1,16 @@
+.welcome {
+  padding-top: 50px;
+      -webkit-animation: fadein 2s; 
+       -moz-animation: fadein 2s; 
+        -ms-animation: fadein 2s; 
+         -o-animation: fadein 2s; 
+            animation: fadein 2s;
+  margin: 20px 0;
+  background-color: $transparent !important;
+}
+
+#welcome-img {
+  width: 100%;
+  padding: 10px 0;
+  margin: -25px;
+}

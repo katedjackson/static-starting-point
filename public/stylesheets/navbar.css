@@ -1,0 +1,13 @@
+nav {
+  z-index: 1; }
+
+.navbar-brand * {
+  height: 120%;
+  width: auto;
+  padding-right: 5%; }
+
+.navbar-default {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  background-image: none;
+  box-shadow: none; }
