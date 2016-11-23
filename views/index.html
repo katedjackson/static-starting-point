@@ -20,14 +20,10 @@
                             <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                             <div class="assetimages">
                             {% for hotel in hotels %}
-                            <a href="#"><img src={{hotel.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover"/></a>
-                            {% endfor %}  
-                        </div>                      
-<!--                        <select name="hotels">
-                        {% for hotel in hotels %}
-                        <option value="{{hotel.name}}">{{hotel.name}}</option>
-                        {% endfor %}
-                        </select> -->
+
+                            <a href="#"><img src={{hotel.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <div id="restaurants">
@@ -35,14 +31,11 @@
                         <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                         <div class="assetimages">
                         {% for restaurant in restaurants %}
-                        <a href="#"><img src={{restaurant.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover"/></a>
-                        {% endfor %}   
-                        </div>
-<!--                        <select name="restaurants">
-                        {% for restaurant in restaurants %}
-                        <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+
+                        <a href="#"><img src={{restaurant.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
                         {% endfor %}
-                        </select> -->
+                        </div>
+
                     </div>
 
                     <div id="activities">
@@ -50,19 +43,14 @@
                         <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                         <div class="assetimages">
                         {% for activity in activities %}
-                        <a href="#"><img src={{activity.image}} class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" data-trigger="hover"/></a>
-                        {% endfor %}  
-                        </div>
-<!--                        <select name="activities">
-                        {% for activity in activities %}
-                        <option value="{{activity.name}}">{{activity.name}}</option>
+
+                        <a href="#"><img src={{activity.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
                         {% endfor %}
-                        </select> -->
-                    </div>  
+                        </div>
+                    </div>
                 </div>
         </div>
-        <div class="col-lg-2 " id="itinerary">
-        </div>
+        <div class="col-lg-2 " id="itinerary">Here's your itinerary for the day:</div>
     </div>
 </div>
 {% endblock %}
