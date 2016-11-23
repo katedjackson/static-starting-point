@@ -35,6 +35,7 @@ html, body {
   max-height: 100% !important;
   margin-right: -15%; }
 
+
 .pre-scrollable::-webkit-scrollbar {
   display: none; }
 
@@ -122,17 +123,11 @@ h4 {
   width: auto;
   padding-right: 5%; }
 
-@media (max-width: 400px) {
-  .assetimages {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1; } }
-
-
 .group:after {
   content: "";
   display: table;
   clear: both; }
+
 
 #map-canvas {
   height: 100%;

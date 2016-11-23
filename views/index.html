@@ -20,7 +20,6 @@
                             <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                             <div class="assetimages">
                             {% for hotel in hotels %}
-
                             <a href="#"><img src={{hotel.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
                             {% endfor %}
                         </div>
@@ -31,11 +30,9 @@
                         <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                         <div class="assetimages">
                         {% for restaurant in restaurants %}
-
                         <a href="#"><img src={{restaurant.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
                         {% endfor %}
                         </div>
-
                     </div>
 
                     <div id="activities">
