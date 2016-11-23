@@ -5,7 +5,8 @@
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
   animation: fadein 2s;
-  margin: 20px 0; }
+  margin: 20px 0;
+  color: #777777 !important; }
 
 #welcome-img {
   width: 100%;

@@ -1,7 +1,8 @@
 #main-wrapper {
   height: 100vh;
   padding: 0;
-  display: flex; }
+  display: flex;
+  color: white !important; }
 
 .pre-scrollable {
   flex: 1;

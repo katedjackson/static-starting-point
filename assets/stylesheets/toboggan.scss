@@ -1,7 +1,5 @@
 @import "variables";
 @import "map";
-@import "welcome";
-@import "scrollarea";
 @import "text";
 @import "navbar";
 
@@ -34,5 +32,9 @@ html, body {
   padding: 0px;
 }
 
-@import "media-queries";
 @import "itinerary";
+
+@import "welcome";
+@import "scrollarea";
+@import "media-queries";
+
