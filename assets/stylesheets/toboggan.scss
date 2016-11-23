@@ -39,8 +39,8 @@ html, body {
 
 .pre-scrollable {
 	flex: 1;
-	max-height: 95% !important;
-  // margin-right: -15%;
+	max-height: 100% !important;
+  margin-right: -15%;
 }
 
 .pre-scrollable::-webkit-scrollbar {
@@ -136,17 +136,17 @@ h4 {
 }
 
 .navbar-brand {
-  img {
+  * {
   height: 120%;
   width: auto;
+  padding-right: 5%;
   }
 }
-
-
-@import "media-queries";
 
 #map-canvas {
   height: 100%;
   padding: 0px;
   margin-right: 10px;
 }
+@import "media-queries";
+>>>>>>> brand
