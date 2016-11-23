@@ -13,7 +13,7 @@
                 <img src="https://s-media-cache-ak0.pinimg.com/originals/64/61/a3/6461a32fe44d33cb6b0673022e86e439.gif" id="welcome-img"/>
                 <h2 class="text-center">Are you ready to plan your first day in New York? </h2>
                 <a href="#hotels"><button class="btn btn-success btn-lg">I'm ready; let's go!  <span class="glyphicon glyphicon-plane"></span></button></a>
-            </div>
+            </div id='scroll-text'>
                     <div id="hotels">
                         <h2 class="text-center"> Where would you like to stay? </h2>
                             <h4 class="text-center"><em>(Mouse over for details)</em></h4>
@@ -43,7 +43,7 @@
                         <a href="#"><img src={{activity.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
                         {% endfor %}
                         </div>
-                    </div>  
+                    </div>
                     </div>
                 </div>
         </div>

@@ -4,22 +4,22 @@ nav {
 
 .navbar-brand {
   * {
-  height: 120%;
+  height: 100%;
   width: auto;
-  padding-right: 5%;
+  padding: 0px 0px 5px 0px;
   }
 }
 
 .navbar-default {
-  background-color:transparent !important;
+  background-color: white !important;
   border-color:transparent !important;
   background-image:none;
-  box-shadow:none;  
+  box-shadow:none;
 
 }
 
 #brand-bkgd {
   background: white!important;
   border-radius: 10%;
-  margin: -5px -10px;
+  margin: 2px, 2px, 5px, 5px;
 }
