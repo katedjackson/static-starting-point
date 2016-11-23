@@ -6,48 +6,50 @@
 <div class='container-fluid' id ="wrapper">
     <div class="row">
         <div class="col-lg-6" id="map-canvas"></div>
-        <div class="col-lg-4" id="main-wrapper">
-            <div class="pre-scrollable text-center" data-spy="scroll" data-target=".navbar" data-offset="50">
-            <div class="welcome jumbotron">
-                <h1 class="text-center lobster">Welcome to Toboggan.<br><h2><small>We're so happy you're here.</small></h2></h1>
-                <img src="https://s-media-cache-ak0.pinimg.com/originals/64/61/a3/6461a32fe44d33cb6b0673022e86e439.gif" id="welcome-img"/>
-                <h2 class="text-center">Are you ready to plan your first day in New York? </h2>
-                <a href="#hotels"><button class="btn btn-success btn-lg">I'm ready; let's go!  <span class="glyphicon glyphicon-plane"></span></button></a>
-            </div id='scroll-text'>
-                    <div id="hotels">
-                        <h2 class="text-center"> Where would you like to stay? </h2>
+        <div id="wood-background">
+            <div class="col-lg-4" id="main-wrapper">
+                <div class="pre-scrollable text-center" data-spy="scroll" data-target=".navbar" data-offset="50">
+                <div class="welcome jumbotron">
+                    <h1 class="text-center lobster">Welcome to Toboggan.<br><h2><small>We're so happy you're here.</small></h2></h1>
+                    <img src="https://s-media-cache-ak0.pinimg.com/originals/64/61/a3/6461a32fe44d33cb6b0673022e86e439.gif" id="welcome-img"/>
+                    <h2 class="text-center">Are you ready to plan your first day in New York? </h2>
+                    <a href="#hotels"><button class="btn btn-success btn-lg">I'm ready; let's go!  <span class="glyphicon glyphicon-plane"></span></button></a>
+                </div id='scroll-text'>
+                        <div id="hotels">
+                            <h2 class="text-center"> Where would you like to stay? </h2>
+                                <h4 class="text-center"><em>(Mouse over for details)</em></h4>
+                                <div class="assetimages">
+                                {% for hotel in hotels %}
+                                <a href="#"><img src={{hotel.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div id="restaurants">
+                        <h2 class="text-center"> And where would you like to dine? </h2>
                             <h4 class="text-center"><em>(Mouse over for details)</em></h4>
                             <div class="assetimages">
-                            {% for hotel in hotels %}
-                            <a href="#"><img src={{hotel.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{hotel.name}}</strong>" data-content="<strong>Rating:</strong> {{hotel.num_stars}} <strong>Amenities:</strong> {{hotel.amenities}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
+                            {% for restaurant in restaurants %}
+                            <a href="#"><img src={{restaurant.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
                             {% endfor %}
+                            </div>
+                        </div>
+
+                        <div id="activities">
+                            <h2 class="text-center"> How would you prefer to make merry? </h2>
+                            <h4 class="text-center"><em>(Mouse over for details)</em></h4>
+                            <div class="assetimages">
+                            {% for activity in activities %}
+
+                            <a href="#"><img src={{activity.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" sdata-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
+                            {% endfor %}
+                            </div>
+                        </div>
                         </div>
                     </div>
-
-                    <div id="restaurants">
-                    <h2 class="text-center"> And where would you like to dine? </h2>
-                        <h4 class="text-center"><em>(Mouse over for details)</em></h4>
-                        <div class="assetimages">
-                        {% for restaurant in restaurants %}
-                        <a href="#"><img src={{restaurant.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{restaurant.name}}</strong>" data-content="<strong>Cuisine:</strong> {{restaurant.cuisine}} <strong>Price:</strong> {{restaurant.price | replace("1", "$") | replace("2", "$$") | replace("3", "$$$") | replace("4", "$$$$") }}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
-                        {% endfor %}
-                        </div>
-                    </div>
-
-                    <div id="activities">
-                        <h2 class="text-center"> How would you prefer to make merry? </h2>
-                        <h4 class="text-center"><em>(Mouse over for details)</em></h4>
-                        <div class="assetimages">
-                        {% for activity in activities %}
-
-                        <a href="#"><img src={{activity.image}} id = "{{restaurant.name}}" class="img-rounded" data-toggle="popover" data-animation="true" title="<strong>{{activity.name}}</strong>" data-content="<strong>Age Range:</strong> {{activity.age_range}}" data-trigger="hover" draggable="true" ondragstart="drag(event)"/></a>
-                        {% endfor %}
-                        </div>
-                    </div>
-                    </div>
-                </div>
+            </div>
+            <div class="col-lg-2 " id="itinerary"></div>
         </div>
-        <div class="col-lg-2 " id="itinerary">Here's your itinerary for the day:</div>
     </div>
 </div>
 {% endblock %}

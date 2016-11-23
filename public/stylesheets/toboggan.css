@@ -37,6 +37,9 @@
   height: 45px;
   visibility: hidden; }
 
+.scroll-text {
+  color: white !important; }
+
 .assetimages {
   /* Prevent vertical gaps */
   line-height: 0;
@@ -75,8 +78,7 @@
   width: 15%;
   z-index: -1;
   padding: 50px;
-  margin: 0px;
-  background-color: #448888; }
+  margin: 0px; }
 
 .lobster {
   font-family: 'Lobster', cursive; }
@@ -112,7 +114,7 @@ html, body {
   width: 100%;
   font-family: 'Josefin Slab', serif !important;
   position: fixed;
-  background: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/10/wood-wallpaper-13.jpg) no-repeat center center fixed;
+  background: url(http://previews.123rf.com/images/kritchanut/kritchanut1312/kritchanut131200058/24736220-Light-wood-texture-background-Stock-Photo-white.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

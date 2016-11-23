@@ -17,6 +17,9 @@
   height: 45px;
   visibility: hidden; }
 
+.scroll-text {
+  color: white !important; }
+
 .assetimages {
   /* Prevent vertical gaps */
   line-height: 0;
