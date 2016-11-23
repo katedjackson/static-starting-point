@@ -101,6 +101,11 @@ nav {
   background-image: none;
   box-shadow: none; }
 
+#brand-bkgd {
+  background: white !important;
+  border-radius: 10%;
+  margin: -5px -10px; }
+
 html, body {
   margin: 0;
   height: 100%;
