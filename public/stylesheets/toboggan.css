@@ -3,7 +3,9 @@ nav {
 
 .row {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  padding: 0px;
+  margin: 0px; }
 
 html, body {
   margin: 0;
@@ -20,7 +22,8 @@ html, body {
   height: 100%;
   width: 100%;
   top: 50px;
-  margin: 0px; }
+  margin: 0px;
+  padding: 0px; }
 
 #main-wrapper {
   height: 100vh;
@@ -29,15 +32,14 @@ html, body {
 
 .pre-scrollable {
   flex: 1;
-  max-height: 95% !important;
-  margin-right: -15%; }
+  max-height: 95% !important; }
 
 .pre-scrollable::-webkit-scrollbar {
   display: none; }
 
 .sidebar-wrapper {
   height: 100%;
-  padding: 50px 0 0px 0;
+  padding: 50px;
   border-right: 1px solid gray; }
 
 #itinerary {
@@ -45,13 +47,10 @@ html, body {
   overflow: hidden;
   height: 100%;
   width: 15%;
-  z-index: -1; }
-
-#map-canvas {
-  height: 100vh;
-  width: 50%;
-  margin-right: 15px;
-  margin-left: -15px; }
+  z-index: -1;
+  padding: 50px;
+  margin: 0px;
+  background-color: #448888; }
 
 .grow, .img-rounded {
   transition: all .2s ease-in-out; }
@@ -63,7 +62,7 @@ h2 {
   padding: 30px 0; }
 
 .welcome {
-  padding: 50px 0;
+  padding-top: 50px;
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;
@@ -164,3 +163,8 @@ h4 {
 @media (max-width: 800px) {
   #main-wrapper {
     flex-direction: column; } }
+
+#map-canvas {
+  height: 100%;
+  padding: 0px;
+  margin-right: 10px; }
